@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<head> 
+  <title> 
+    reg_forum
+  </title> 
+  <link rel="stylesheet" type="text/css" href="css/style4.css">
+</head> 
+
+<body> 
+  <div class="reg_forum1">
+      <h1>Please choose the number of hours</h1>
+
+      <p> 
+          Select one from the given options: 
+      </p>
+  </div>
+
+  <div class="box">
+    <select id="select1"> 
+      <option value=1>Less than 1 Hour</option> 
+      <option value=2>Less than 2 Hour</option>
+      <option value=3>Less than 3 Hour</option>
+      <option value=4>Less than 4 Hour</option>
+      <option value=5>Less than 5 Hour</option>
+      <option value=6>Less than 6 Hour</option>
+      <option value=7>Less than 7 Hour</option>
+      <option value=8>Less than 8 Hour</option>
+      <option value=9>Less than 9 Hour</option>
+      <option value=10>Less than 10 Hour</option>
+      <option value=11>Less than 11 Hour</option>
+      <option value=12>Less than 12 Hour</option>
+    </select>
+  
+  </div>
+
+  <div class="reg_forum2">
+      <p> 
+          Total amount according to your working hour is 
+          <span class="output"></span> 
+      </p> 
+  </div>
+  
+  <button class="example_b" onclick="getOption()"> 
+    Get Price 
+  </button> 
+
+  <button class="example_c" onclick="window.location.href = 'registration_form.html';">Apply Now</button>
+  
+  <script type="text/javascript"> 
+    function getOption() { 
+      selectElement = 
+          document.querySelector('#select1'); 
+          
+      output = (selectElement.value)*700; 
+
+      document.querySelector('.output').textContent 
+          = output; 
+    } 
+  </script> 
+</body> 
+
+</html>          
